@@ -38,7 +38,7 @@ else if(playerInput == '3'){
 }
 console.log('Twój ruch to: ' + playerMove);
 
-//result 
+//result consol log
 
 if( computerMove == 'kamien' && playerMove == 'papier'){
   console.log('Ty wygrywasz!');

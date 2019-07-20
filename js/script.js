@@ -1,17 +1,42 @@
-function printMessage(msg){
-	var div = document.createElement('div');
-	div.innerHTML = msg;
-	document.getElementById('messages').appendChild(div);
+//computerMove
+let randomNumber = Math.floor(Math.random() * 3 + 1);
+let computerMove = randomNumber;
+
+if(randomNumber == 1){
+  computerMove = 'kamien';
+}
+else if (randomNumber==2) {
+    computerMove = 'papier';
+}
+else if (randomNumber==3) {
+    computerMove = 'nozyce';
 }
 
-function clearMessages(){
-	document.getElementById('messages').innerHTML = '';
+else {computerMove = 'Cos poszll nie tak';
 }
-//variable declaration
+console.log('Ruch komputera to: ' + computerMove);
 
-//kodilla
-let computerMove = 'kamień';
-printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to papier, to wygrywasz!');
-// task1
-let playerMove = 'papier';
-printMessage('Zagralem ' + playerMove + '! Jesli Twoj ruch to kamien to przegrywasz! ');
+
+//playerMove and playerInput
+
+let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+
+console.log('Gracz wpisał: ' + playerInput);
+
+let playerMove = playerInput;
+
+if(playerInput == '1'){
+  playerMove = 'kamień';
+}
+else if(playerInput == '2'){
+  playerMove = 'papier';
+}
+else if(playerInput == '3'){
+  playerMove = 'nożyce';
+}
+  else {playerMove = 'Cos poszlo nie tak';
+}
+console.log('Twój ruch to: ' + playerMove);
+
+
+//result 

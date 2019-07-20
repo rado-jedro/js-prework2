@@ -12,7 +12,7 @@ else if (randomNumber==3) {
     computerMove = 'nozyce';
 }
 
-else {computerMove = 'Cos poszll nie tak';
+else {computerMove = 'Cos poszlo nie tak';
 }
 console.log('Ruch komputera to: ' + computerMove);
 
@@ -26,17 +26,47 @@ console.log('Gracz wpisał: ' + playerInput);
 let playerMove = playerInput;
 
 if(playerInput == '1'){
-  playerMove = 'kamień';
+  playerMove = 'kamien';
 }
 else if(playerInput == '2'){
   playerMove = 'papier';
 }
 else if(playerInput == '3'){
-  playerMove = 'nożyce';
+  playerMove = 'nozyce';
 }
-  else {playerMove = 'Cos poszlo nie tak';
+  else {playerMove = 'Nieprawidlowy wybor !';
 }
 console.log('Twój ruch to: ' + playerMove);
 
-
 //result 
+
+if( computerMove == 'kamien' && playerMove == 'papier'){
+  console.log('Ty wygrywasz!');
+}
+else if( computerMove == 'kamien' && playerMove == 'nozyce'){
+  console.log('Ty przegrywasz!');
+}
+else if( computerMove == 'kamień' && playerMove == 'kamien'){
+  console.log('Remis! Gramy jeszcze raz');
+}
+else if( computerMove == 'papier' && playerMove == 'papier'){
+  console.log('Remis! Gramy jeszcze raz');
+}
+else if( computerMove == 'papier' && playerMove == 'nozyce'){
+  console.log('Ty wygrywasz!');
+}
+else if( computerMove == 'papier' && playerMove == 'kamien'){
+  console.log('Ty przegrywasz!');
+}
+else if( computerMove == 'nozyce' && playerMove == 'papier'){
+  console.log('Ty przegrywasz!');
+}
+
+else if( computerMove == 'nozyce' && playerMove == 'kamien'){
+  console.log('Ty wygrywasz!');
+}
+else if( computerMove == 'nozyce' && playerMove == 'nozyce'){
+  console.log('Remis! Gramy jeszcze raz');
+}
+else console.log('Fatal error')
+

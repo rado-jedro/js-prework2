@@ -43,7 +43,7 @@ if( computerMove == 'kamien' && playerMove == 'papier'){
 else if( computerMove == 'kamien' && playerMove == 'nozyce'){
   printMessage('Ty przegrywasz!');
 }
-else if( computerMove == 'kamień' && playerMove == 'kamien'){
+else if( computerMove == 'kamien' && playerMove == 'kamien'){
   printMessage('Remis! Gramy jeszcze raz');
 }
 else if( computerMove == 'papier' && playerMove == 'papier'){

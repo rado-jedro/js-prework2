@@ -1,15 +1,21 @@
+//global variables
+let stone ='kamien';
+let paper = 'papier'
+let scissors = 'nozyce';
+
+
 //computerMove
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 let computerMove = randomNumber;
 
 if(randomNumber == 1){
-  computerMove = 'kamien';
+  computerMove = stone;
 }
 else if (randomNumber==2) {
-    computerMove = 'papier';
+    computerMove = paper;
 }
 else if (randomNumber==3) {
-    computerMove = 'nozyce';
+    computerMove = scissors;
 }
 else {computerMove = 'Cos poszlo nie tak';
 }
@@ -23,13 +29,13 @@ printMessage('Gracz wpisał: ' + playerInput);
 let playerMove = playerInput;
 
 if(playerInput == '1'){
-  playerMove = 'kamien';
+  playerMove = stone;
 }
 else if(playerInput == '2'){
-  playerMove = 'papier';
+  playerMove = paper;
 }
 else if(playerInput == '3'){
-  playerMove = 'nozyce';
+  playerMove = scissors;
 }
   else {playerMove = 'Nieprawidlowy wybor !';
 }
@@ -37,32 +43,32 @@ printMessage('Twój ruch to: ' + playerMove);
 
 //result consol log
 
-if( computerMove == 'kamien' && playerMove == 'papier'){
+if( computerMove == stone && playerMove == paper){
   printMessage('Ty wygrywasz!');
 }
-else if( computerMove == 'kamien' && playerMove == 'nozyce'){
+else if( computerMove == stone && playerMove == scissors){
   printMessage('Ty przegrywasz!');
 }
-else if( computerMove == 'kamien' && playerMove == 'kamien'){
+else if( computerMove == stone && playerMove == stone){
   printMessage('Remis! Gramy jeszcze raz');
 }
-else if( computerMove == 'papier' && playerMove == 'papier'){
+else if( computerMove == paper && playerMove == paper){
   printMessage('Remis! Gramy jeszcze raz');
 }
-else if( computerMove == 'papier' && playerMove == 'nozyce'){
+else if( computerMove == paper && playerMove == scissors){
   printMessage('Ty wygrywasz!');
 }
-else if( computerMove == 'papier' && playerMove == 'kamien'){
+else if( computerMove == paper && playerMove == stone){
   printMessage('Ty przegrywasz!');
 }
-else if( computerMove == 'nozyce' && playerMove == 'papier'){
+else if( computerMove == scissors && playerMove == paper){
   printMessage('Ty przegrywasz!');
 }
 
-else if( computerMove == 'nozyce' && playerMove == 'kamien'){
+else if( computerMove == scissors && playerMove == stone){
   printMessage('Ty wygrywasz!');
 }
-else if( computerMove == 'nozyce' && playerMove == 'nozyce'){
+else if( computerMove == scissors && playerMove == scissors){
   printMessage('Remis! Gramy jeszcze raz');
 }
 else printMessage('Fatal error')

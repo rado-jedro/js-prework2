@@ -71,5 +71,4 @@ else if( computerMove == scissors && playerMove == stone){
 else if( computerMove == scissors && playerMove == scissors){
   printMessage('Remis! Gramy jeszcze raz');
 }
-else printMessage('Fatal error')
-
+else printMessage('Fatal error');

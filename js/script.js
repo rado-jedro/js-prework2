@@ -72,3 +72,4 @@ else if( computerMove == scissors && playerMove == scissors){
   printMessage('Remis! Gramy jeszcze raz');
 }
 else printMessage('Fatal error');
+

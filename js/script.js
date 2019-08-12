@@ -89,8 +89,7 @@ function displayResult(argPlayerMove, argComputerMove){
   else printMessage('Fatal error ;-)');
 }
 
-printMessage(displayResult(argPlayerMove, argComputerMove));
-
+displayResult(argPlayerMove, argComputerMove);
 /*
 if(playerInput == '1'){
   playerMove = rock;

@@ -26,7 +26,7 @@ function getMoveName(argMoveId){
   }
 }
 
-
+console.log('computerMove to ' + computerMove);
 /*if(randomNumber == 1){
   computerMove = rock;
 }
@@ -43,25 +43,53 @@ else {computerMove = 'Cos poszlo nie tak';
 
 //playerMove and playerInput
 
+argComputerMove=computerMove;
+console.log(argComputerMove);
 
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
-printMessage('Gracz wpisał: ' + playerInput);
+//printMessage('Gracz wpisał: ' + playerInput);
+
+//printMessage('Ruch komputera to: ' + computerMove);
 
 //let playerMove = playerInput;
 let playerMove = getMoveName(playerInput);
 argPlayerMove=playerMove;
 
-argComputerMove=computerMove;
 
-function displayResult(argComputerMove, argPlayerMove){
+function displayResult(argPlayerMove, argComputerMove){
   printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 
-  if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
+  if( argComputerMove == rock && argPlayerMove == paper){
     printMessage('Ty wygrywasz!');
-  } else {
-    printMessage('Tym razem przegrywasz :(');
   }
+  else if( argComputerMove == rock && argPlayerMove == scissors){
+    printMessage('Ty przegrywasz!');
+  }
+  else if( argComputerMove == rock && argPlayerMove == rock){
+    printMessage('Remis! Gramy jeszcze raz');
+  }
+  else if( argComputerMove == paper && argPlayerMove == paper){
+    printMessage('Remis! Gramy jeszcze raz');
+  }
+  else if( argComputerMove == paper && argPlayerMove == scissors){
+    printMessage('Ty wygrywasz!');
+  }
+  else if( argComputerMove == paper && argPlayerMove == rock){
+    printMessage('Ty przegrywasz!');
+  }
+  else if( argComputerMove == scissors && argPlayerMove == paper){
+    printMessage('Ty przegrywasz!');
+  }
+  else if( argComputerMove == scissors && argPlayerMove == rock){
+    printMessage('Ty wygrywasz!');
+  }
+  else if( argComputerMove == scissors && argPlayerMove == scissors){
+    printMessage('Remis! Gramy jeszcze raz');
+  }
+  else printMessage('Fatal error ;-)');
 }
+
+printMessage(displayResult(argPlayerMove, argComputerMove));
 
 /*
 if(playerInput == '1'){
@@ -76,9 +104,9 @@ else if(playerInput == '3'){
   else {playerMove = 'Nieprawidlowy wybor !';
 }
 */
+/*
 printMessage('Twój ruch to: ' + playerMove);
 
-//result consol log
 
 if( computerMove == rock && playerMove == paper){
   printMessage('Ty wygrywasz!');
@@ -108,10 +136,5 @@ else if( computerMove == scissors && playerMove == scissors){
   printMessage('Remis! Gramy jeszcze raz');
 }
 else printMessage('Fatal error');
-argComputerMove=computerMove;
 
-
-console.log(argComputerMove);
-console.log(argPlayerMove);
-console.log(displayResult);
-
+*/

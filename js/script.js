@@ -91,7 +91,6 @@ document.getElementById('play-scissors').addEventListener('click', function(){
 
 
 
-
 //OLD TASKS
 
 

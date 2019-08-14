@@ -3,9 +3,9 @@ function playGame(playerInput){
   clearMessages();
 
   //global variables
-  let rock ='kamien';
-  let paper = 'papier'
-  let scissors = 'nozyce';
+  const rock ='kamien';
+  const paper = 'papier';
+  const scissors = 'nozyce';
   //computerMove
   let randomNumber = Math.floor(Math.random() * 3 + 1);
   //let computerMove = randomNumber;
@@ -31,7 +31,6 @@ function playGame(playerInput){
   console.log('computerMove to ' + computerMove);
 
   argComputerMove=computerMove;
-  console.log(argComputerMove);
 
   //let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
   //printMessage('Gracz wpisał: ' + playerInput);
@@ -86,8 +85,6 @@ document.getElementById('play-paper').addEventListener('click', function(){
 document.getElementById('play-scissors').addEventListener('click', function(){
   playGame(3);
 });
-
-
 
 
 

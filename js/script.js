@@ -1,3 +1,4 @@
+{
 function playGame(playerInput){
   
   clearMessages();
@@ -13,6 +14,7 @@ function playGame(playerInput){
   let computerMove = getMoveName(randomNumber);
 
   function getMoveName(argMoveId){
+    
     if(argMoveId == 1){
       return 'kamien';
     } 
@@ -86,7 +88,7 @@ document.getElementById('play-scissors').addEventListener('click', function(){
   playGame(3);
 });
 
-
+}
 
 //OLD TASKS
 

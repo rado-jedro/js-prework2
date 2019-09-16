@@ -15,13 +15,13 @@ function playGame(playerInput){
   function getMoveName(argMoveId){
     
     if(argMoveId == 1){
-      return 'kamien';
+      return rock;
     } 
     else if(argMoveId == 2) {
-      return 'papier';
+      return paper;
     }
     else if(argMoveId == 3){
-      return 'nozyce';
+      return scissors;
     }
     else {
       printMessage('Nie znam ruchu o id ' + argMoveId + '.');
